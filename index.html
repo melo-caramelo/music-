@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+  <title>music+</title>
+  <link rel="icon" href="/styles/images/icons8-add-song-100.png">
+</head>
+<body>
+  <header>
+    <div class="headercontent">
+      <a href="/index.html"> <img src="/styles/images/icones/logo_transparent.png" alt="" class="logo"></a>
+    </div>
+    <div class="menus">
+      <a class="menu-item" href="/pages/about.html">sobre nós</a>
+      <a class="menu-item" href="/pages/group.html">equipe</a>
+      <a class="menu-item" href="/pages/contact.html">contatos</a>
+    </div>
+    <div class="midia">
+      <a href=""><img src="/styles/images/icons8-facebook-novo-512.png" alt="" class="social"></a>
+      <a href=""><img src="/styles/images/icons8-instagram-512.png" alt="" class="social"></a>
+      <a href=""><img src="/styles/images/icons8-twitter-512.png" alt="" class="social"></a>
+    </div>
+  </header>
+  
+  <section>
+    <div class="container">
+      <div class="title-box"><h1 class="title">como voce está se sentindo?</h1></div>
+
+      <div class = 'search-box'>
+        <div class="select-box" id="select">
+          <div class="options-container">
+            <div class="option">
+              <input type="radio" class="radio" id="tristeza" name="category"/>
+              <label for="tristeza">tristeza</label>
+            </div>
+  
+            <div class="option" value="solidão">
+              <input type="radio" class="radio" id="solidão" name="category" />
+              <label for="solidão">solidão</label>
+            </div>
+  
+            <div class="option" value="stress">
+              <input type="radio" class="radio" id="stress" name="category" />
+              <label for="stress">stress</label>
+            </div>
+  
+            <div class="option">
+              <input type="radio" class="radio" id="medo" name="category" />
+              <label for="medo">medo</label>
+            </div>
+  
+            <div class="option">
+              <input type="radio" class="radio" id="frustação" name="category" />
+              <label for="frustação">frustação</label>
+            </div>
+  
+            <div class="option">
+              <input type="radio" class="radio" id="ódio" name="category" />
+              <label for="ódio">ódio</label>
+            </div>
+  
+            <div class="option">
+              <input type="radio" class="radio" id="falha" name="category" />
+              <label for="falha">falha</label>
+            </div>
+  
+            <div class="option">
+              <input type="radio" class="radio" id="hostilidade" name="category" />
+              <label for="hostilidade">hostilidade</label>
+            </div>
+  
+            <div class="option">
+              <input type="radio" class="radio" id="desespero" name="category" />
+              <label for="desespero">desespero</label>
+            </div>
+          </div>
+  
+          <div class="selected">
+            escolha algum sentimento
+          </div>
+        </div>
+
+        <button onclick="redirect()" value="enviar">
+          <div class="svg-wrapper-1">
+            <div class="svg-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
+              </svg>
+            </div>
+          </div>
+          <span>enviar</span>
+        </button>
+      
+      </div>
+
+    </div>
+
+    <footer>
+      <div class="txt">
+        <p>copyright ©2022 All rights reserverd | this website is made by <a href="" class="space">SPACELANDERS</a></p>
+      </div>
+    </footer>  
+
+  </section>
+
+  <script>
+    function redirect(){
+           const e=document.getElementById("select")
+           const value=e.value
+           console.log(value)
+           const baseURL= `/musicpages/${
+               value
+           }/index.html`
+         window.location=baseURL  
+       }
+  </script>
+
+  <script src="main.js"></script>
+</body>
+</html>
