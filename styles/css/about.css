@@ -98,6 +98,7 @@ header {
 }
 
 .image {
+  position: absolute;
   width: 700px;
   display: block;
   margin-left: auto;

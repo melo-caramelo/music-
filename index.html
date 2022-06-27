@@ -34,16 +34,16 @@
         <div class="select-box" id="select">
           <div class="options-container">
             <div class="option">
-              <input type="radio" class="radio" id="tristeza" name="category"/>
+              <input type="radio" class="radio" id="tristeza" name="category" value="tristeza"/>
               <label for="tristeza">tristeza</label>
             </div>
   
-            <div class="option" value="solidão">
-              <input type="radio" class="radio" id="solidão" name="category" />
+            <div class="option">
+              <input type="radio" class="radio" id="solidão" name="category"/>
               <label for="solidão">solidão</label>
             </div>
   
-            <div class="option" value="stress">
+            <div class="option">
               <input type="radio" class="radio" id="stress" name="category" />
               <label for="stress">stress</label>
             </div>
@@ -54,7 +54,7 @@
             </div>
   
             <div class="option">
-              <input type="radio" class="radio" id="frustação" name="category" />
+              <input type="radio" class="radio" id="frustação" name="category"/>
               <label for="frustação">frustação</label>
             </div>
   
@@ -111,12 +111,9 @@
   <script>
     function redirect(){
            const e=document.getElementById("select")
-           const value=e.value
-           console.log(value)
-           const baseURL= `/musicpages/${
-               value
-           }/index.html`
-         window.location=baseURL  
+            if (tristeza=true){
+              window.location.href="/musicpages/tristeza/index.html";
+            }
        }
   </script>
 
